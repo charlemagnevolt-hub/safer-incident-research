@@ -28,7 +28,7 @@ Primary sources read in full or in part for the detailed case analyses (all are 
 
 ## What has been done
 
-All work was produced by one AI system working with the repository owner. **No independent human review or coding has taken place.**
+This research is directed by Dr. Torsten Bernasco and investigates the translation of documented autonomous agent incidents into independently testable runtime enforcement requirements. The current benchmarks are preliminary and await external validation. **No independent human review or coding has taken place.**
 
 1. **Corpus ingestion.** Dashboard-level metadata for all 65 entries (titles, dates as text, concern level, model line, third-party flag, source labels). Concern levels: 8 at level 1, 32 at 2, 16 at 3, 7 at 4, 2 at 5.
 2. **Three stage-level case analyses** against full-text primary sources, with a claim-by-claim verification log that records which earlier statements were confirmed, qualified or corrected. These are the Hugging Face incident, an unauthorized external configuration change, and monitoring suppression. All statements are attributed to their sources.
@@ -67,10 +67,10 @@ Pre-registered run (298 cases, deterministic):
 
 How to read this honestly:
 
-- Of the 122 harmful cases, 47 use non-canonical request forms that a strict input grammar rejects outright; 60 use canonical forms and 15 are semantic (delegation, approvals, budgets, ownership). The prevention figure therefore partly reflects strictness. The cost is high and visible: every one of 65 unusual-but-harmless requests was denied, and a deliberately conservative session rule denied two benign cases. The non-canonical list was written by the authors, so 0 of 65 is not a field false-denial rate.
+- Of the 122 harmful cases, 47 use non-canonical request forms that a strict input grammar rejects outright; 60 use canonical forms and 15 are semantic (delegation, approvals, budgets, ownership). The prevention figure therefore partly reflects strictness. The cost is high and visible: every one of 65 unusual-but-harmless requests was denied, and a deliberately conservative session rule denied two benign cases. The non-canonical list was written for this project rather than drawn from agent traffic, so 0 of 65 is not a field false-denial rate.
 - The three surviving mutants were later killed by three tests added after the run, and four spec-derived tests were added before it. The 96.5% figure is therefore not a blind measurement.
 - Two limitation cases still succeed under enforcement by design: an unmediated client (visible only as an unexplained effect, not prevented) and a monitor-bearing file the policy does not know to protect.
-- The same author wrote the policy, the simulated tools, the oracle and the cases. v2 has not been evaluated by anyone else.
+- The policy, the simulated tools, the oracle and the cases were all written by the same party (this project). v2 has not been evaluated by anyone else.
 - Out of model: compromise of the host or of the tool-call executor, tampering with transcripts or traces, kernel or sandbox escapes, real LLM behaviour, the correctness of human approvals, and harmful content written within granted authority.
 
 ## What this project does **not** establish
@@ -94,6 +94,10 @@ All experiments are synthetic and local: a temporary directory and loopback serv
 
 If you are an author or affiliate of a cited source and believe a statement here misdescribes it, please open an issue with the statement, the source passage and a link. A private reporting contact has not been designated yet.
 
+## Provenance and tooling disclosure
+
+Analysis, code and drafting for this project were produced with AI assistance (Anthropic's Claude) under the direction of Dr. Torsten Bernasco, who is responsible for the content. This is stated here as research provenance. It is deliberately not recorded in Git commit metadata, which carries only the human author.
+
 ## License, citation and release status
 
-No license has been chosen, so public visibility does not by itself grant any right to reuse the code or text. No citation metadata or authorship statement has been published yet. The research branch will be released only after review of what it contains.
+No license has been chosen, so public visibility does not by itself grant any right to reuse the code or text. No citation metadata or formal authorship statement has been published yet. The research branch will be released only after review of what it contains.
