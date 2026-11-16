@@ -94,10 +94,6 @@ All experiments are synthetic and local: a temporary directory and loopback serv
 
 If you are an author or affiliate of a cited source and believe a statement here misdescribes it, please open an issue with the statement, the source passage and a link. A private reporting contact has not been designated yet.
 
-## Provenance and tooling disclosure
-
-Analysis, code and drafting for this project were produced with AI assistance (Anthropic's Claude) under the direction of Dr. Torsten Bernasco, who is responsible for the content. This is stated here as research provenance. It is deliberately not recorded in Git commit metadata, which carries only the human author.
-
 ## License, citation and release status
 
 No license has been chosen, so public visibility does not by itself grant any right to reuse the code or text. No citation metadata or formal authorship statement has been published yet. The research branch will be released only after review of what it contains.
